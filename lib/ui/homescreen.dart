@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/constants/colors.dart';
+import 'package:online_shop/widgets/banner_slider_widget.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,8 +10,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Text('Danial'),
+        child: Column(
+          children: [
+            BannerSliderWidget(),
+          ],
         ),
       ),
     );
