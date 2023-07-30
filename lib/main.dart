@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:online_shop/ui/homescreen.dart';
+import 'package:online_shop/ui/category_screen.dart';
 
 void main() {
   runApp(const Application());
@@ -24,13 +24,13 @@ class Application extends StatelessWidget {
       theme: ThemeData(
         textTheme: const TextTheme(
           headlineSmall: TextStyle(
-            fontFamily: 'SB',
+            fontFamily: 'ISB',
             fontSize: 12,
           ),
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const CategotyScreen(),
     );
   }
 }
