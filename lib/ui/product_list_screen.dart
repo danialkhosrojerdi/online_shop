@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/widgets/product_item.dart';
 
 import '../constants/colors.dart';
 
-class CategotyScreen extends StatelessWidget {
-  const CategotyScreen({super.key});
+class ProductListScreen extends StatelessWidget {
+  const ProductListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +24,13 @@ class CategotyScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      const SizedBox(width: 16),
+                      Image.asset('assets/images/icon_back.png'),
                       const Expanded(
                         child: Text(
                           textAlign: TextAlign.center,
-                          'دسته بندی',
+                          'پرفروش ترین ها',
                           style: TextStyle(
                             fontFamily: 'ISB',
                             fontSize: 16,
@@ -47,21 +49,13 @@ class CategotyScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 44),
               sliver: SliverGrid(
                 delegate: SliverChildBuilderDelegate(
-                  (context, index) {
-                    return Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadiusDirectional.all(
-                          Radius.circular(15),
-                        ),
-                      ),
-                    );
-                  },
+                  (context, index) => const ProductItem(),
                 ),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 20,
                   crossAxisSpacing: 20,
+                  childAspectRatio: 2 / 2.8,
                 ),
               ),
             )
