@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:online_shop/ui/category_screen.dart';
 import 'package:online_shop/ui/homescreen.dart';
-import 'package:online_shop/ui/product_detail_screen.dart';
 import 'package:online_shop/ui/profile_screen.dart';
+import 'package:online_shop/ui/shopping_cart_screen.dart';
 
 import 'constants/colors.dart';
 
@@ -121,7 +121,7 @@ class _ApplicationState extends State<Application> {
     return <Widget>[
       const HomeScreen(),
       const CategotyScreen(),
-      const ProductDetailScreen(),
+      const ShoppingCartScreen(),
       const ProfileScreen(),
     ];
   }
